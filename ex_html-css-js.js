@@ -1,23 +1,13 @@
-function validarFormulario(event) {
+function validarelformulario(event) {
     event.preventDefault();
 
     let nombre = document.getElementById("nombre").value.trim();
+    let direccion = document.getElementById("direccion").value.trim();
     let telefono = document.getElementById("telefono").value.trim();
     let email = document.getElementById("email").value.trim();
-    let direccion = document.getElementById("direccion").value.trim();
 
     if (!nombre) {
         alert("El campo nombre es obligatorio.");
-        return;
-    }
-
-    if (!telefono) {
-        alert("El campo teléfono es obligatorio.");
-        return;
-    }
-
-    if (!email) {
-        alert("El campo email es obligatorio.");
         return;
     }
 
@@ -26,8 +16,13 @@ function validarFormulario(event) {
         return;
     }
 
-    if (!email.includes("@")) {
-        alert("El email debe contener el @.");
+    if (direccion.length < 15) {
+        alert("La dirección debe tener mínimo 15 caracteres.");
+        return;
+    }
+
+    if (!telefono) {
+        alert("El campo teléfono es obligatorio.");
         return;
     }
 
@@ -36,8 +31,13 @@ function validarFormulario(event) {
         return;
     }
 
-    if (direccion.length < 15) {
-        alert("La dirección debe tener mínimo 15 caracteres.");
+    if (!email) {
+        alert("El campo email es obligatorio.");
+        return;
+    }
+
+    if (!email.includes("@")) {
+        alert("El email debe contener el @.");
         return;
     }
 
@@ -49,6 +49,7 @@ function validarFormulario(event) {
         alert("El pedido no se ha enviado.");
     }
 }
+document.querySelector("form").addEventListener("submit", validarelformulario);
 let preciosHamburguesa = {
     clasica: 5,
     bbq: 7,
@@ -76,6 +77,10 @@ function calcularPrecio() {
 
     document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
 }
+document.querySelectorAll('input[name="hamburguesa"], input[name="ingredientes"]').forEach(input => {
+    input.addEventListener("change", calcularPrecio);
+});
+calcularPrecio();
 
 function contador() {
     let caracteres = document.getElementById("comentarios");
@@ -85,3 +90,4 @@ function contador() {
     contador.textContent = instrucciones.value.length/100;
 }
 document.getElementById("comentarios").addEventListener("input", contador);
+document.getElementById("comentarios").addEventListener("input", actualizarContador);
