@@ -80,15 +80,13 @@ function calcularPrecio() {
 document.querySelectorAll('input[name="hamburguesa"], input[name="ingredientes"]').forEach(input => {
     input.addEventListener("change", calcularPrecio);
 });
-calcularPrecio();
 
 function contador() {
     let caracteres = document.getElementById("comentarios");
     let contador = document.getElementById("contador");
     let caracterescontados = 100 - caracteres.value.length;
 
-    contador.textContent = instrucciones.value.length/100;
+    contador.textContent = caracteres.value.length/100;
 }
 document.getElementById("comentarios").addEventListener("input", contador);
-document.getElementById("comentarios").addEventListener("input", caracteres);
 document.querySelector("form").addEventListener("submit", validarelformulario);
