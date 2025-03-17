@@ -41,12 +41,39 @@ function validarFormulario(event) {
         return;
     }
 
-    let confirmacion = confirm("¿Quieres enviar el pedido?");
+    let confirmacion = confirm("¿Quieres confirmar y enviar tu pedido ahora?");
     if (confirmacion) {
-        alert("Pedido enviado.");
+        alert("¡Gracias por tu pedido,"[nombre]);
         event.target.submit();
     } else {
         alert("El pedido no se ha enviado.");
     }
 }
+let preciosHamburguesa = {
+    Clásica: 5,
+    BBQ: 7,
+    Especial: 8
+};
 
+let preciosIngredientes = {
+    : 1,
+    : 1.5,
+    : 2,
+    : 2,
+    : 1
+};
+
+function calcularPrecio() {
+    let tamañoSeleccionado = document.querySelector('input[name="tamaño"]:checked');
+    let precioTamaño = tamañoSeleccionado ? preciosTamaño[tamañoSeleccionado.value] : 0;
+
+    let ingredientesSeleccionados = document.querySelectorAll('input[name="ingredientes"]:checked');
+    let precioIngredientes = 0;
+    ingredientesSeleccionados.forEach(ingrediente => {
+        precioIngredientes += preciosIngredientes[ingrediente.value];
+    });
+
+    let precioTotal = precioTamaño + precioIngredientes;
+
+    document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
+}
