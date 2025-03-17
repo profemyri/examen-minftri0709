@@ -78,7 +78,7 @@ function calcularPrecio() {
     document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
 }
 document.querySelectorAll('input[name="hamburguesa"], input[name="ingredientes"]').forEach(input => {
-    input.addEventListener("change", calcularPrecio);
+    input.addEventListener("calcularPrecio");
 });
 
 function contador() {
