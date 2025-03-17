@@ -11,7 +11,7 @@
     <a href="cheese-burger.png" alt="A la rica hamburguesa"></a>
 
     <form action="pedido.php" method="post">
-
+        <label>Datos del cliente:</label>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
 
@@ -35,10 +35,27 @@
                 <label><input type="radio" name="hamburguesa" value="clasica" required>Clásica</label>
                 <label><input type="radio" name="hamburguesa" value="bbq">BBQ</label>
                 <label><input type="radio" name="hamburguesa" value="especial">Especial</label>
-                
             </div>
 
-            
+        <label>Ingredientes extra:</label>
+            <div class="ingredientes">
+                <label><input type="checkbox" name="ingredientes" value="bacon">Bacon</label>
+                <label><input type="checkbox" name="ingredientes" value="queso">Queso</label>
+                <label><input type="checkbox" name="ingredientes" value="huevo">Huevo</label>
+                <label><input type="checkbox" name="ingredientes" value="patatas">Patatas</label>
+            </div>    
+
+            <h2>Método de Pago:</h2>
+            <div class="pago">
+                <label><input type="radio" name="pago" value="efectivo" required> Efectivo</label>
+                <label><input type="radio" name="pago" value="tarjeta"> Tarjeta</label>
+                <label><input type="radio" name="pago" value="paypal"> Paypal</label>
+            </div>
+            <button type="submit">Enviar Pedido</button>
+
+            <h2>Instrucciones adicionales:</h2>
+            <textarea id="comentarios" name="comentarios" placeholder="Escribe aquí un comentario..." maxlength="100"></textarea>
+            <p id="contador_caracteres">0/100 caracteres</p>
 
 
     </form>
