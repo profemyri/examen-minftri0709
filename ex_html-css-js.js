@@ -76,3 +76,12 @@ function calcularPrecio() {
 
     document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
 }
+
+function contador() {
+    let caracteres = document.getElementById("comentarios");
+    let contador = document.getElementById("contador");
+    let caracterescontados = 100 - caracteres.value.length;
+
+    contador.textContent = instrucciones.value.length/100;
+}
+document.getElementById("comentarios").addEventListener("input", contador);

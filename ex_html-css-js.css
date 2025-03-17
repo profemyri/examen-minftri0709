@@ -48,7 +48,7 @@ textarea {
    color: #5f5e5e;
 }
 
-button :hover {
+button [input="submit"] :hover {
    background-color: white;
    text-align: red;
 }
