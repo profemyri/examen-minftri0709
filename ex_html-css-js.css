@@ -17,10 +17,29 @@ h2 {
    margin-bottom: 15px;
 }
 
-
-
-form {
-   ...........
+img {
+   border-radius: 5px;
+   margin-bottom: 15px;
 }
 
-............
+form {
+   background-color: #ffffff;
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+input, select, textarea {
+   border: #eaeaea 1px solid;
+   border-radius: 5px;
+   padding: 8px;
+   margin-bottom: 15px unset;
+}
+
+button {
+   background-color: #a4161a;
+   text-align: white center;
+   border-radius: 5px;
+   padding: 10px;
+}
