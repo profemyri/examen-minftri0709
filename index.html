@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Realiza tu pedido</h1>
-    <a href="cheese-burger.png" alt="A la rica hamburguesa"></a>
+    <img src="cheese-burger.png" alt="A la rica hamburguesa">
 
     <form action="pedido.php" method="post">
         <label>Datos del cliente:</label>
@@ -29,14 +29,14 @@
         <label for="hora">Hora aproximada que quieres la entrega:</label>
         <input type="time" id="hora" name="hora" required>
 
-        <label>Tipo de hamburguesa:</label>
+        <h2>Tipo de hamburguesa:</h2>
             <div class="hamburguesa">
                 <label><input type="radio" name="hamburguesa" value="clasica" required>Clásica (5€)</label>
                 <label><input type="radio" name="hamburguesa" value="bbq">BBQ (7€)</label>
                 <label><input type="radio" name="hamburguesa" value="especial">Especial (8€)</label>
             </div>
 
-        <label>Ingredientes extra:</label>
+        <h2>Ingredientes extra:</h2>
             <div class="ingredientes">
                 <label><input type="checkbox" name="ingredientes" value="bacon">Bacon (1€)</label>
                 <label><input type="checkbox" name="ingredientes" value="queso">Queso (1€)</label>

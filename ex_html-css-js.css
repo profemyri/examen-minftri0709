@@ -1,10 +1,23 @@
 body {
-   ...........
+   background-color: #faf0dc;
+   color: black;
+   font-family: Arial, sans-serif;
 }
 
 h1 {
-   ...........
+   width: 32px;
+   color: #a4161a;
+   text-align: center;
+   margin-bottom: 20px;
 }
+
+h2 {
+   width: 24px;
+   color: #5f5e5e;
+   margin-bottom: 15px;
+}
+
+
 
 form {
    ...........

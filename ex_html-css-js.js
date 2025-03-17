@@ -72,7 +72,7 @@ function calcularPrecio() {
         precioIngredientes += preciosIngredientes[ingrediente.value];
     });
 
-    let precioTotal = precio + precioIngredientes;
+    let precioTotal = preciosHamburguesa + precioIngredientes;
 
     document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
 }
