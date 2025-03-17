@@ -39,7 +39,8 @@ input, select, textarea {
 
 button {
    background-color: #a4161a;
-   text-align: white center;
+   text-align: center;
+   color: white;
    border-radius: 5px;
    padding: 10px;
 }
@@ -50,5 +51,5 @@ textarea {
 
 button[type="submit"]:hover {
    background-color: white;
-   text-align: red;
+   color: red;
 }
