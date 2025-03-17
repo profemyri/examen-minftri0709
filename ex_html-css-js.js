@@ -90,4 +90,4 @@ function contador() {
     contador.textContent = instrucciones.value.length/100;
 }
 document.getElementById("comentarios").addEventListener("input", contador);
-document.getElementById("comentarios").addEventListener("input", actualizarContador);
+document.getElementById("comentarios").addEventListener("input", caracteres);
