@@ -49,7 +49,7 @@ function validarelformulario(event) {
         alert("El pedido no se ha enviado.");
     }
 }
-document.querySelector("form").addEventListener("submit", validarelformulario);
+
 let preciosHamburguesa = {
     clasica: 5,
     bbq: 7,
@@ -91,3 +91,4 @@ function contador() {
 }
 document.getElementById("comentarios").addEventListener("input", contador);
 document.getElementById("comentarios").addEventListener("input", caracteres);
+document.querySelector("form").addEventListener("submit", validarelformulario);
