@@ -85,6 +85,6 @@ function contador() {
 
     contador.textContent = caracteres.value.length/100;
 }
+document.querySelector("form").addEventListener("submit", validarelformulario);
 document.getElementById("comentarios").addEventListener("input", contador);
 document.querySelectorAll('input[name="hamburguesa"], input[name="ingredientes"]').addEventListener("calcularPrecio");
-document.querySelector("form").addEventListener("submit", validarelformulario);
