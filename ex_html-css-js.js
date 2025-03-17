@@ -50,30 +50,29 @@ function validarFormulario(event) {
     }
 }
 let preciosHamburguesa = {
-    Clásica: 5,
-    BBQ: 7,
-    Especial: 8
+    clasica: 5,
+    bbq: 7,
+    especial: 8
 };
 
 let preciosIngredientes = {
-    : 1,
-    : 1.5,
-    : 2,
-    : 2,
-    : 1
+    bacon: 1,
+    queso: 1,
+    huevo: 1,
+    patatas: 1
 };
 
 function calcularPrecio() {
-    let tamañoSeleccionado = document.querySelector('input[name="tamaño"]:checked');
-    let precioTamaño = tamañoSeleccionado ? preciosTamaño[tamañoSeleccionado.value] : 0;
+    let tipohamburguesa = document.querySelector('input[name="hamburguesa"]:checked');
+    let preciosHamburguesa = tipohamburguesa ? preciosHamburguesa[tipohamburguesa.value] : 0;
 
-    let ingredientesSeleccionados = document.querySelectorAll('input[name="ingredientes"]:checked');
+    let ingredientesadicional = document.querySelectorAll('input[name="ingredientes"]:checked');
     let precioIngredientes = 0;
-    ingredientesSeleccionados.forEach(ingrediente => {
+    ingredientesadicional.forEach(ingrediente => {
         precioIngredientes += preciosIngredientes[ingrediente.value];
     });
 
-    let precioTotal = precioTamaño + precioIngredientes;
+    let precioTotal = precio + precioIngredientes;
 
     document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
 }
