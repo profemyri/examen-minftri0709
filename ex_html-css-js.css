@@ -43,3 +43,7 @@ button {
    border-radius: 5px;
    padding: 10px;
 }
+
+textarea {
+   color: #5f5e5e;
+}
