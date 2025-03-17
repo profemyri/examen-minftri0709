@@ -47,3 +47,8 @@ button {
 textarea {
    color: #5f5e5e;
 }
+
+button :hover {
+   background-color: white;
+   text-align: red;
+}
