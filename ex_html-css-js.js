@@ -50,8 +50,3 @@ function validarFormulario(event) {
     }
 }
 
-function actualizarContador() {
-    let instrucciones = document.getElementById("comentarios");
-    let contador = document.getElementById("contador_caracteres");
-    let caracteresRestantes = 100 - instrucciones.value.length;
-}
