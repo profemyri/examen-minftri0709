@@ -77,9 +77,6 @@ function calcularPrecio() {
 
     document.getElementById("precio_total").textContent = `Precio total: ${precioTotal.toFixed(2)}€`;
 }
-document.querySelectorAll('input[name="hamburguesa"], input[name="ingredientes"]').forEach(input => {
-    input.addEventListener("calcularPrecio");
-});
 
 function contador() {
     let caracteres = document.getElementById("comentarios");
@@ -89,4 +86,5 @@ function contador() {
     contador.textContent = caracteres.value.length/100;
 }
 document.getElementById("comentarios").addEventListener("input", contador);
+document.querySelectorAll('input[name="hamburguesa"], input[name="ingredientes"]').addEventListener("calcularPrecio");
 document.querySelector("form").addEventListener("submit", validarelformulario);
